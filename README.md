@@ -43,7 +43,7 @@
   Alerts is a good trick to add message on the fly.
 
 ### Build a home page
-1. Create the route  application/config/routes.php
+1. Edit the route in application/config/routes.php
 ```php
   $route['home'] = 'includes/home';
   $route['home/(.+)'] = 'includes/home/$1';
