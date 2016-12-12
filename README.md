@@ -13,13 +13,15 @@ The use of Code Igniter with a parent controller of all is perfectly accepted he
   Read the <a href="http://www.smarty.net/quick_install"  target="_blank">quick install</a><br/>
   Copy Smarty directory in your application/third_party<br/>
   Create the directories.<br/>
-    application/cache/smarty with written permissions 755<br/>
-    views/configs<br/>
-    views/templates with written permissions 755<br/>
-    views/templates_c<br/>
+  ```
+  application/cache/smarty with written permissions 755
+  views/configs
+  views/templates with written permissions 755
+  views/templates_c
+  ```
 
 3. Create the route  application/config/routes.php
-```
+```php
 $route['home'] = 'includes/home';
 $route['home/(.+)'] = 'includes/home/$1';
 ```
@@ -37,19 +39,19 @@ $route['home/(.+)'] = 'includes/home/$1';
   application/page_structure.php<br/>
   
 3. In your application/config/autoload.php add the libraries Use_smarty and alerts :
-```
+```php
 $autoload['libraries'] = array('use_smarty' => 'smarty', 'alerts');
 ```
 Alerts is a good trick to add message on the fly.
 
 ### Build a home page
 Create the route  application/config/routes.php
-```
+```php
 $route['home'] = 'includes/home';
 $route['home/(.+)'] = 'includes/home/$1';
 ```
 Create the controller /controllers/includes/Home.php<br/>
-```
+```php
 <?php
 
 defined('BASEPATH') OR exit('No direct script access allowed');
