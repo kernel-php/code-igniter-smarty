@@ -19,7 +19,7 @@
   > views/templates_c<br/>
   
 2. Create the route  application/config/routes.php
-  ```php
+```php
   $route['home'] = 'includes/home';
   $route['home/(.+)'] = 'includes/home/$1';
   ```
@@ -37,19 +37,19 @@
   > application/views/page_structure.php<br/>
   
 4. In your application/config/autoload.php add the libraries Use_smarty and alerts :
-  ```php
+```php
   $autoload['libraries'] = array('use_smarty' => 'smarty', 'alerts');
   ```
   Alerts is a good trick to add message on the fly.
 
 ### Build a home page
 1. Create the route  application/config/routes.php
-  ```php
+```php
   $route['home'] = 'includes/home';
   $route['home/(.+)'] = 'includes/home/$1';
   ```
 2. Create the controller /controllers/includes/Home.php<br/>
-  ```php
+ ```php
   <?php
   defined('BASEPATH') OR exit('No direct script access allowed');
   require_once APPPATH . 'controllers/structure/Page.php';
