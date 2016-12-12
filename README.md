@@ -72,11 +72,11 @@
 3. Create the template application/views/template/includes/home.tpl
 
 ### What is Code Igniter 
-CodeIgniter is a powerful PHP framework with a very small footprint, built for developers who need a simple and elegant toolkit to create full-featured web applications
+  CodeIgniter is a powerful PHP framework with a very small footprint, built for developers who need a simple and elegant   toolkit to create full-featured web applications
 
 ### What is Smarty
-Smarty is a template engine for PHP, facilitating the separation of presentation (HTML/CSS) from application logic. This implies that PHP code is application logic, and is separated from the presentation. 
+  Smarty is a template engine for PHP, facilitating the separation of presentation (HTML/CSS) from application logic. This implies that PHP code is application logic, and is separated from the presentation. 
 
 
 ### Warning
-The use of Code Igniter with a parent controller of all is perfectly accepted here.<br/>
+  The use of Code Igniter with a parent controller of all is perfectly accepted here.<br/>
