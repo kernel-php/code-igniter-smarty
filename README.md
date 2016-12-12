@@ -19,7 +19,7 @@
   > views/templates_c<br/>
   
 2. Create the route  application/config/routes.php
-```php
+  ```
   $route['home'] = 'includes/home';
   $route['home/(.+)'] = 'includes/home/$1';
   ```
