@@ -4,7 +4,7 @@
 > By Pascal Koch - <a href="pascalkoch.net">pascalkoch.net</a>
 
 ### How it works
-L'utilisation de Code Igniter avec un controller parent stuctuere/Page est parfaitement assumée içi.<br/>
+The use of Code Igniter with a parent controller stucture/Page.php is perfectly accepted here.<br/>
 
 ### Installation
 0. Download or use Code Igniter, it is your application 
