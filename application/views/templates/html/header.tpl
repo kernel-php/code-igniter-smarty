@@ -24,16 +24,8 @@
         var BASEPATH    =   '{$BASEPATH}';
         var APPPATH     =   '{$APPPATH}';
         var FCPATH      =   '{$FCPATH}';
-        var site_lang   =   '{$site_lang}';
-        var cancel      =   '{$cancel}';
-        var delete_this_item = '{$delete_this_item}';
-        var duplicate_this_item ='{$duplicate_this_item}';
-        var inprocess ='{$inprocess}';
-        var accept_file_types = '{$accept_file_types}';
-        var max_file_size ='{$max_file_size}';
-        var upload_max_filesize ='{$upload_max_filesize}';
     </script>
 
 </head>
 <body>
-    <div class="container-fluid">
+    <div>
