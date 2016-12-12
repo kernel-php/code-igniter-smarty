@@ -1,4 +1,4 @@
-# code-igniter-smarty  :fire: +  :bulb:
+# code-igniter-smarty  :fire: +  :bulb: = :sunny:
 
 ## Use Smarty engine template with Code Igniter
 > By Pascal Koch - <a href="pascalkoch.net">pascalkoch.net</a>
@@ -45,20 +45,18 @@ The use of Code Igniter with a parent controller of all is perfectly accepted he
   Alerts is a good trick to add message on the fly.
 
 ### Build a home page
-Create the route  application/config/routes.php
-```php
-$route['home'] = 'includes/home';
-$route['home/(.+)'] = 'includes/home/$1';
-```
-Create the controller /controllers/includes/Home.php<br/>
-```php
-<?php
+1. Create the route  application/config/routes.php
+  ```php
+  $route['home'] = 'includes/home';
+  $route['home/(.+)'] = 'includes/home/$1';
+  ```
+2. Create the controller /controllers/includes/Home.php<br/>
+  ```php
+  <?php
+  defined('BASEPATH') OR exit('No direct script access allowed');
+  require_once APPPATH . 'controllers/structure/Page.php';
 
-defined('BASEPATH') OR exit('No direct script access allowed');
-
-require_once APPPATH . 'controllers/structure/Page.php';
-
-class Home extends Page {
+  class Home extends Page {
     
     
     public function __construct() {
@@ -72,10 +70,9 @@ class Home extends Page {
         $this->alert->add_info('Welcome');
     }
 
-}
-
-```
-Create the template application/views/template/includes/home.tpl
+  }
+  ```
+3. Create the template application/views/template/includes/home.tpl
 
 ### What is Code Igniter 
 CodeIgniter is a powerful PHP framework with a very small footprint, built for developers who need a simple and elegant toolkit to create full-featured web applications
