@@ -30,49 +30,49 @@
  * @author Pascal Koch <info@pascalkoch.net>
  */
 class Alerts {
-    
-    private $errors=array(),$infos=array(),$successes=array(),$warnings=array();
-    
-    public function add_error($string){
-        $this->errors[]=$string;
+
+    private $errors = array(), $infos = array(), $successes = array(), $warnings = array();
+
+    public function add_error($string) {
+        $this->errors[] = $string;
     }
-    
-     public function add_info($string){
-        $this->infos[]=$string;
+
+    public function add_info($string) {
+        $this->infos[] = $string;
     }
-    
-    public function add_success($string){
-        $this->successes[]=$string;
+
+    public function add_success($string) {
+        $this->successes[] = $string;
     }
-    
-    public function add_warning($string){
-        $this->warnings[]=$string;
+
+    public function add_warning($string) {
+        $this->warnings[] = $string;
     }
-    
-     public function reset_error(){
-        $this->errors=array();
+
+    public function reset_error() {
+        $this->errors = array();
     }
-    
-     public function reset_infos(){
-        $this->infos=array();
+
+    public function reset_infos() {
+        $this->infos = array();
     }
-    
-    public function reset_successes(){
-        $this->successes=array();
+
+    public function reset_successes() {
+        $this->successes = array();
     }
-    
-     public function reset_warnings(){
-        $this->warnings=array();
+
+    public function reset_warnings() {
+        $this->warnings = array();
     }
-    
+
     function getErrors() {
-        $errors= $this->errors;
+        $errors = $this->errors;
         $this->reset_error();
         return $errors;
     }
 
     function getInfos() {
-        $infos= $this->infos;
+        $infos = $this->infos;
         $this->reset_infos();
         return $infos;
     }
@@ -84,11 +84,9 @@ class Alerts {
     }
 
     function getWarnings() {
-         $warnings = $this->warnings;
-         $this->reset_warnings();
+        $warnings = $this->warnings;
+        $this->reset_warnings();
         return $warnings;
     }
 
-
-    
 }
