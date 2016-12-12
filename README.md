@@ -1,7 +1,7 @@
 # code-igniter-smarty  :fire: +  :bulb: = :sunny:
 
 ## Use Smarty engine template with Code Igniter
-## By Pascal Koch - <a href="pascalkoch.net">pascalkoch.net</a>
+> By Pascal Koch - <a href="pascalkoch.net">pascalkoch.net</a>
 
 ### Introduction
   The use of Code Igniter with a parent controller of all is perfectly accepted here.<br/>
@@ -13,30 +13,28 @@
   Read the <a href="http://www.smarty.net/quick_install"  target="_blank">quick install</a><br/>
   Copy Smarty directory in your application/third_party<br/>
   Create the directories.<br/>
-  ```
-  application/cache/smarty with written permissions 755
-  views/configs
-  views/templates with written permissions 755
-  views/templates_c
-  ```
-
+  > application/cache/smarty with written permissions 755<br/>
+  > views/configs<br/>
+  > views/templates with written permissions 755<br/>
+  > views/templates_c<br/>
+  
 2. Create the route  application/config/routes.php
   ```php
   $route['home'] = 'includes/home';
   $route['home/(.+)'] = 'includes/home/$1';
   ```
 3. Create directories and copy files in your application<br/>
-  application/controllers/structure/Pages.php<br/>
-  application/controllers/includes/Home.php<br/>
-  application/controllers/Boot.php<br/>
-  
-  application/libraries/Alerts.php<br/>
-  application/libraries/Use_smarty.php<br/>
-  
-  application/views/templates/html and files<br/>
-  application/views/templates/includes and files<br/>
-  
-  application/page_structure.php<br/>
+  > application/controllers/structure/Pages.php<br/>
+  > application/controllers/includes/Home.php<br/>
+  > application/controllers/Boot.php<br/>
+  <br/>
+  > application/libraries/Alerts.php<br/>
+  > application/libraries/Use_smarty.php<br/>
+  <br/>
+  > application/views/templates/html and files<br/>
+  > application/views/templates/includes and files<br/>
+  <br/>
+  > application/views/page_structure.php<br/>
   
 4. In your application/config/autoload.php add the libraries Use_smarty and alerts :
   ```php
