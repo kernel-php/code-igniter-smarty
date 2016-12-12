@@ -76,7 +76,7 @@ class Page extends CI_Controller {
 
     function setTitle($pageName) {
         if (empty(self::$title)) {
-            self::$title = array('sitename' => 'STVS', 'separator' => '|');
+            self::$title = array('sitename' => 'The name of the website', 'separator' => '|');
         }
         self::$title['pagename'] = $pageName;
     }
@@ -95,9 +95,9 @@ class Page extends CI_Controller {
     public function setLinks() {
         if (empty(self::$links)) {
             self::$links = array(
-                array('href' => 'http://fonts.googleapis.com/css?family=Lato:400,700,900', 'rel' => 'stylesheet', 'type' => 'text/css'),
+              /*  array('href' => 'http://fonts.googleapis.com/css?family=Lato:400,700,900', 'rel' => 'stylesheet', 'type' => 'text/css'),
                 array('href' => base_url() . 'theme/css/style.css', 'rel' => 'stylesheet', 'type' => 'text/css'),
-                array('href' => base_url() . 'theme/img/favicon.ico?v=3', 'rel' => 'shortcut icon', 'type' => ''),
+                array('href' => base_url() . 'theme/img/favicon.ico?v=0.1', 'rel' => 'shortcut icon', 'type' => ''),*/
             );
         }
     }
