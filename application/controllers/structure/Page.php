@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Page extends CI_Controller {
 
     static $javascripts = array(), $footerJavascripts = array(), $links = array(), $title = array(),
-            $bottomHyperlinks = array(), $bottomDialogs = array(),$topHyperlinks = array(), $metas = array();
+            $bottomHyperlinks = array(), $bottomDialogs = array(), $topHyperlinks = array(), $metas = array();
 
     const mode_add = 'add';
     const mode_del = 'delete';
@@ -31,12 +31,6 @@ class Page extends CI_Controller {
     public function structure($pageName, $left_template = '', $right_template = '') {
         $this->header($pageName);
         $this->top();
-
-        $this->smarty->assign('successes', $this->alerts->getSuccesses());
-        $this->smarty->assign('errors', $this->alerts->getErrors());
-        $this->smarty->assign('infos', $this->alerts->getInfos());
-        $this->smarty->assign('warnings', $this->alerts->getWarnings());
-
         $this->smarty->assign('left_template', $left_template);
         $this->smarty->assign('right_template', $right_template);
         $this->bottom();
@@ -57,9 +51,9 @@ class Page extends CI_Controller {
     }
 
     private function top() {
-        $this->setLangs();
         $this->setTopHyperlinks();
         $this->smarty->assign('top_hyperlinks', self::$topHyperlinks);
+        $this->setMessages();
     }
 
     private function bottom() {
@@ -87,7 +81,7 @@ class Page extends CI_Controller {
                 array('name' => 'robots', 'content' => 'index,follow'),
                 array('name' => 'viewport', 'content' => 'width=device-width, initial-scale=1.0'),
                 array('name' => 'description', 'content' => 'site_description'),
-                array('name' => 'keywords', 'content' =>'site_keywords'),
+                array('name' => 'keywords', 'content' => 'site_keywords'),
             );
         }
     }
@@ -95,9 +89,9 @@ class Page extends CI_Controller {
     public function setLinks() {
         if (empty(self::$links)) {
             self::$links = array(
-              /*  array('href' => 'http://fonts.googleapis.com/css?family=Lato:400,700,900', 'rel' => 'stylesheet', 'type' => 'text/css'),
-                array('href' => base_url() . 'theme/css/style.css', 'rel' => 'stylesheet', 'type' => 'text/css'),
-                array('href' => base_url() . 'theme/img/favicon.ico?v=0.1', 'rel' => 'shortcut icon', 'type' => ''),*/
+                    /*  array('href' => 'http://fonts.googleapis.com/css?family=Lato:400,700,900', 'rel' => 'stylesheet', 'type' => 'text/css'),
+                      array('href' => base_url() . 'theme/css/style.css', 'rel' => 'stylesheet', 'type' => 'text/css'),
+                      array('href' => base_url() . 'theme/img/favicon.ico?v=0.1', 'rel' => 'shortcut icon', 'type' => ''), */
             );
         }
     }
@@ -105,10 +99,10 @@ class Page extends CI_Controller {
     public function setJavascripts() {
         if (empty(self::$javascripts)) {
             self::$javascripts = array(
-               /* base_url() . 'theme/third_party/jquery.js',
-                base_url() . 'theme/third_party/bootstrap.min.js',
-                base_url() . 'theme/third_party/jquery-ui/jquery-ui.min.js',
-                base_url() . 'theme/js/functions.js',*/
+                    /* base_url() . 'theme/third_party/jquery.js',
+                      base_url() . 'theme/third_party/bootstrap.min.js',
+                      base_url() . 'theme/third_party/jquery-ui/jquery-ui.min.js',
+                      base_url() . 'theme/js/functions.js', */
             );
         }
     }
@@ -138,7 +132,7 @@ class Page extends CI_Controller {
     }
 
     private function setTopHyperlinks() {
-        if (empty(self::$topHyperlinks) && !in_array($this->uri->segment(1), array('login', 'logout'))) {            
+        if (empty(self::$topHyperlinks) && !in_array($this->uri->segment(1), array('login', 'logout'))) {
             switch ($this->uri->segment(1)) {
                 case 'login':case 'logout':
                     break;
@@ -151,5 +145,11 @@ class Page extends CI_Controller {
         }
     }
 
+    public function setMessages() {
+        $this->smarty->assign('successes', $this->alerts->getSuccesses());
+        $this->smarty->assign('errors', $this->alerts->getErrors());
+        $this->smarty->assign('infos', $this->alerts->getInfos());
+        $this->smarty->assign('warnings', $this->alerts->getWarnings());
+    }
 
 }
