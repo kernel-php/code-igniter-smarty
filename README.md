@@ -20,12 +20,12 @@ The use of Code Igniter with a parent controller of all is perfectly accepted he
   views/templates_c
   ```
 
-3. Create the route  application/config/routes.php
-```php
-$route['home'] = 'includes/home';
-$route['home/(.+)'] = 'includes/home/$1';
-```
-2. Create directories and copy files in your application<br/>
+2. Create the route  application/config/routes.php
+  ```php
+  $route['home'] = 'includes/home';
+  $route['home/(.+)'] = 'includes/home/$1';
+  ```
+3. Create directories and copy files in your application<br/>
   application/controllers/structure/Pages.php<br/>
   application/controllers/includes/Home.php<br/>
   application/controllers/Boot.php<br/>
@@ -38,11 +38,11 @@ $route['home/(.+)'] = 'includes/home/$1';
   
   application/page_structure.php<br/>
   
-3. In your application/config/autoload.php add the libraries Use_smarty and alerts :
-```php
-$autoload['libraries'] = array('use_smarty' => 'smarty', 'alerts');
-```
-Alerts is a good trick to add message on the fly.
+4. In your application/config/autoload.php add the libraries Use_smarty and alerts :
+  ```php
+  $autoload['libraries'] = array('use_smarty' => 'smarty', 'alerts');
+  ```
+  Alerts is a good trick to add message on the fly.
 
 ### Build a home page
 Create the route  application/config/routes.php
