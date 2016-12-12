@@ -18,10 +18,10 @@ The use of Code Igniter with a parent controller of all is perfectly accepted he
   <a href="http://www.smarty.net/download" target="_blank">Download Smarty</a><br/>
   Read the <a href="http://www.smarty.net/quick_install"  target="_blank">quick install</a><br/>
   Copy Smarty directory in your application/third_party<br/>
-  Create the directories with written permissions.<br/>
-    application/cache/smarty<br/>
+  Create the directories.<br/>
+    application/cache/smarty with written permissions 755<br/>
     views/configs<br/>
-    views/templates<br/>
+    views/templates with written permissions 755<br/>
     views/templates_c<br/>
 
 3. Create the route  application/config/routes.php
