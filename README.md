@@ -3,9 +3,6 @@
 ## Use Smarty engine template with Code Igniter
 > By Pascal Koch - <a href="pascalkoch.net">pascalkoch.net</a>
 
-### How it works
-The use of Code Igniter with a parent controller of all is perfectly accepted here.<br/>
-
 ### Installation
 0. Download or use Code Igniter, it is your application 
 1. Installation of Smarty
@@ -79,3 +76,7 @@ CodeIgniter is a powerful PHP framework with a very small footprint, built for d
 
 ### What is Smarty
 Smarty is a template engine for PHP, facilitating the separation of presentation (HTML/CSS) from application logic. This implies that PHP code is application logic, and is separated from the presentation. 
+
+
+### Warning
+The use of Code Igniter with a parent controller of all is perfectly accepted here.<br/>
