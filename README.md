@@ -30,6 +30,8 @@
   <br/>
   > application/libraries/Alerts.php<br/>
   > application/libraries/Use_smarty.php<br/>
+  Replace in require_once(APPPATH . 'third_party/smarty-3.1.24/libs/Smarty.class.php');
+  the path of your Smarty.class.php.
   <br/>
   > application/views/templates/html and files<br/>
   > application/views/templates/includes and files<br/>
