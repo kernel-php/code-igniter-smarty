@@ -18,7 +18,7 @@
   > views/templates with written permissions 755<br/>
   > views/templates_c<br/>
   
-2. Create the route  application/config/routes.php
+2. Create the routes  application/config/routes.php
   ```
   $route['default_controller'] = 'boot';
     
