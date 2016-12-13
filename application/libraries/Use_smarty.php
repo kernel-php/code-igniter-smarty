@@ -53,7 +53,6 @@ class Use_smarty extends Smarty {
             $this->assignByRef("ci", $ci);
         }
 
-        log_message('debug', "Smarty Class Initialized");
     }
 
 }
