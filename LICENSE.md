@@ -1,4 +1,5 @@
- * The MIT License
+```php 
+* The MIT License
  *
  * Copyright 2015 Pascal Koch <info@pascalkoch.net>.
  *
@@ -19,3 +20,4 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
+```
