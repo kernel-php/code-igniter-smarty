@@ -30,6 +30,7 @@
   <br/>
   > application/libraries/Alerts.php<br/>
   > application/libraries/Use_smarty.php<br/>
+  In Use_smarty.php :
   ```
   require_once(APPPATH . 'third_party/smarty-3.1.24/libs/Smarty.class.php');
   ```
