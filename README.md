@@ -20,8 +20,12 @@
   
 2. Create the route  application/config/routes.php
   ```
+  $route['default_controller'] = 'boot';
+    
   $route['home'] = 'includes/home';
   $route['home/(.+)'] = 'includes/home/$1';
+
+  $route['translate_uri_dashes'] = FALSE;  
   ```
 3. Create directories and copy files in your application<br/>
   > application/controllers/structure/Pages.php<br/>
