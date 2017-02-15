@@ -17,15 +17,7 @@ class Page extends CI_Controller {
             date_default_timezone_set('Europe/Paris');
         }
         parent::__construct();
-        $this->models();
         $this->output->enable_profiler(FALSE);
-    }
-
-    public function models() {
-        $this->load->model('user_model');
-        $this->load->model('frontpage_model');
-        $this->load->model('mails_model');
-        $this->load->model('login_model');
     }
 
     public function structure($pageName, $left_template = '', $right_template = '') {
